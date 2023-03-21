@@ -1,0 +1,56 @@
+font:
+  size: 12
+window:
+  opacity: 1
+  padding:
+    x: 0
+    y: 0
+  decorations: full
+  dynamic_padding: true
+schemes:
+  # github Alacritty Colors
+  github: &github
+    colors:
+      # Default colors
+      primary:
+        background: '0x24292e'
+        foreground: '0xd1d5da'
+      # Normal colors
+      normal:
+        black:   '0x586069'
+        red:     '0xea4a5a'
+        green:   '0x34d058'
+        yellow:  '0xffea7f'
+        blue:    '0x2188ff'
+        magenta: '0xb392f0'
+        cyan:    '0x39c5cf'
+        white:   '0xd1d5da'
+      # Bright colors
+      bright:
+        black:   '0x959da5'
+        red:     '0xf97583'
+        green:   '0x85e89d'
+        yellow:  '0xffea7f'
+        blue:    '0x79b8ff'
+        magenta: '0xb392f0'
+        cyan:    '0x56d4dd'
+        white:   '0xfafbfc'
+    
+      indexed_colors:
+        - { index: 16, color: '0xd18616' }
+        - { index: 17, color: '0xf97583' }
+
+# Choose ONE color scheme from those available in the above list.
+# colors: *github
+colors: *github
+
+key_bindings:
+  - { key: N, mods: Command, action: SpawnNewInstance }
+  - { key: Space, mods: Alt, chars: " " }
+  - { key: Back, mods: Super, chars: "\x15" } # delete word/line
+  - { key: Left, mods: Alt, chars: "\x1bb" } # one word left
+  - { key: Right, mods: Alt, chars: "\x1bf" } # one word right
+  - { key: Left, mods: Command, chars: "\x1bOH", mode: AppCursor } # Home
+  - { key: Right, mods: Command, chars: "\x1bOF", mode: AppCursor } # End
+  - { key: R, mods: Command, chars: "\x1bR" }
+
